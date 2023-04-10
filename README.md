@@ -1,0 +1,1 @@
+# entertaiment_web_app_react_nextjs
