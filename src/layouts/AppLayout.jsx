@@ -1,14 +1,15 @@
 import Head from "next/head";
-import styles from '../styles/Layout.module.css'
+import SideBar from "@/components/SideBar";
 import SearchBar from "@/components/SearchBar";
-
 
 export default function AppLayout() {
   return (
-    <div className={styles.wrapper}>
-     <Head>
-      <SearchBar/>
-     </Head>
-    </div>
-  )
+    <>
+      <Head></Head>
+      <div>
+        <SideBar />
+        <SearchBar />
+      </div>
+    </>
+  );
 }
