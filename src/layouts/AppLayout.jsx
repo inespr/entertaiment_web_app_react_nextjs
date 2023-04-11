@@ -1,7 +1,7 @@
 import Head from "next/head";
+
 import styles from '../styles/Layout.module.css'
 import SearchBar from "@/components/SearchBar";
-
 
 export default function AppLayout() {
   return (
@@ -11,4 +11,5 @@ export default function AppLayout() {
      </Head>
     </div>
   )
+
 }
