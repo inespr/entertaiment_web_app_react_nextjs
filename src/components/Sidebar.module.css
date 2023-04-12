@@ -13,9 +13,16 @@
 }
 
 .last_child {
-  margin-top: 30px;
+  margin-top: auto;
   border-radius: 50px;
 }
 
 .sideBar img {
+}
+
+.icons{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
 }
