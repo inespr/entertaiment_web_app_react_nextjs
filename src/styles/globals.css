@@ -1,5 +1,4 @@
 * {
-  font-family: "Outfit";
   color: var(--text-primary-color);
 }
 
@@ -18,3 +17,5 @@ html {
   --button-color: #fe4644;
   --icon-disable-color: #586a8e;
 }
+
+
