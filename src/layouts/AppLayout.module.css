@@ -1,7 +1,6 @@
-.wrapper {
+.mainWrapper {
   padding: 20px;
   display: flex;
-  flex-direction: column;
 }
 .credits {
   display: flex;
@@ -18,8 +17,10 @@
 
 .header {
   height: 100%;
-  position: fixed;
   display: flex;
+  position: fixed;
   align-items: center;
 }
-
+.container {
+  flex-basis: 100%;
+}
