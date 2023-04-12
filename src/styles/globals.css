@@ -1,3 +1,20 @@
-*{
-  background-color: #10141F;
+* {
+  font-family: "Outfit";
+  color: var(--text-primary-color);
+}
+
+html {
+  background-color: var(--bg-color);
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --bg-color: #10141f;
+  --bg-navbar-color: #161d2f;
+  --text-primary-color: white;
+  --text-secondary-color: #c1c5c8;
+  --button-color: #fe4644;
+  --icon-disable-color: #586a8e;
 }

@@ -1,0 +1,21 @@
+.wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.credits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.text {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: hsl(223 23% 46% / 1);
+}
+
+.header{
+
+}

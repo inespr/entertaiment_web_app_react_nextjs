@@ -1,16 +1,10 @@
-
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import AppLayout from '@/layouts/AppLayout'
-
-const inter = Inter({ subsets: ['latin'] })
+import AppLayout from "@/layouts/AppLayout";
 
 export default function Home() {
   return (
-   <AppLayout>
-    
-   </AppLayout>
-  )
+    <AppLayout
+      metaTitle="Entertainment Web App | Home"
+      metaDescription="Frontenmentor project realised by...."
+    ></AppLayout>
+  );
 }
