@@ -6,9 +6,10 @@
   justify-content: space-between;
   gap: 30px;
   width: 50px;
-  height: 80%;
+  height: calc(100vh - 40px);
   background-color: #161d2f;
   border-radius: 10px;
+  
 }
 
 .last_child {
