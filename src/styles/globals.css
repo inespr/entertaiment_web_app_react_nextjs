@@ -1,5 +1,6 @@
 * {
   color: var(--text-primary-color);
+  box-sizing: border-box;
 }
 
 html {
@@ -17,5 +18,3 @@ html {
   --button-color: #fe4644;
   --icon-disable-color: #586a8e;
 }
-
-
