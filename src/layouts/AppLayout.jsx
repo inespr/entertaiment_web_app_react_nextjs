@@ -28,7 +28,7 @@ export default function AppLayout({ metaTitle, metaDescription, children }) {
       <header className={styles.header}>
         <SideBar />
       </header>
-      <main>
+      <main className={styles.main}>
         <SearchBar />
         {children}
       </main>

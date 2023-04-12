@@ -16,6 +16,9 @@
   color: hsl(223 23% 46% / 1);
 }
 
-.header{
-
+.header {
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
 }
