@@ -1,7 +1,6 @@
-.wrapper {
+.mainWrapper {
   padding: 20px;
   display: flex;
-  flex-direction: column;
 }
 .credits {
   display: flex;
@@ -16,10 +15,12 @@
   color: hsl(223 23% 46% / 1);
 }
 
-.header{
-
+.header {
+  height: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
 }
-
-.main{
-  
+.container {
+  flex-basis: 100%;
 }
