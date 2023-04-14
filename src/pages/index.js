@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <AppLayout
       metaTitle="Entertainment Web App | Home"
-      metaDescription="Frontenmentor project realised by...."
+      metaDescription="Frontenmentor project realized by...."
     ></AppLayout>
   );
 }

@@ -1,4 +1,3 @@
-import Layout from "../layouts/AppLayout";
 import 'normalize.css';
 import "../styles/globals.css";
 import { Outfit } from "next/font/google";
