@@ -1,8 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;600&display=swap');
-  */
-
 * {
-  font-family: "Inter", sans-serif;
   color: var(--text-primary-color);
   box-sizing: border-box;
 }
