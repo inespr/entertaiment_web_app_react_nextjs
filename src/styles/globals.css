@@ -19,3 +19,8 @@ html {
   --button-color: #fe4644;
   --icon-disable-color: #586a8e;
 }
+
+main{
+  margin-left: 80px;
+  
+}
