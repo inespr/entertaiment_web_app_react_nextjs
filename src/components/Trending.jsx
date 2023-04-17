@@ -22,21 +22,20 @@ export default function Trending({ trendings }) {
       >
         {trendings.results.map((result) => (
           <section key={result.id} className={styles.trending_box_wrapper}>
-            
             <Carousel.Slide>
-            <div className={styles.bookmark}>
-              <Image
-                src="/icons/icon-bookmark-empty.svg"
-                alt="home"
-                width={12}
-                height={12}
-              />
-            </div>
+              <div className={styles.bookmark}>
+                <Image
+                  src="/icons/icon-bookmark-empty.svg"
+                  alt="home"
+                  width={12}
+                  height={12}
+                />
+              </div>
               <section className={styles.trending_box}>
                 <Image
                   src={`${process.env.NEXT_PUBLIC_TMDB_IMG_BASE_PATH}${result.backdrop_path}`}
-                  height={320}
-                  width={420}
+                  height={300}
+                  width={385}
                   alt={`Image from ${result.title}`}
                   position={"relative"}
                   className={styles.image}
@@ -45,12 +44,14 @@ export default function Trending({ trendings }) {
                   <span className={styles.elements}>
                     <span>{result.media_type.toUpperCase()}</span>
                     <span>
-                      {result.release_date && result.release_date.slice(0, 4)}
+                      {result.release_date
+                        ? result.release_date.slice(0, 4)
+                        : result.first_air_date.slice(0, 4)}
                     </span>
                     <span>{result.original_language.toUpperCase()}</span>
                   </span>
                   <li key={result.id} className={styles.title}>
-                    {result.title}
+                    {result.title ? result.title : result.name}
                   </li>
                 </div>
               </section>
