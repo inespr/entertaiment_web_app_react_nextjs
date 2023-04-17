@@ -1,0 +1,69 @@
+/* Trending.module.css */
+
+.trending_box {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.trending_box::-webkit-scrollbar {
+  display: none;
+}
+
+.trending_box > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 420px; /* establece un ancho para el contenedor de la imagen */
+  margin-right: 16px; /* añade un margen derecho para separar las imágenes */
+}
+
+/* Añade un estilo al primer contenedor para asegurarte de que comience desde el borde izquierdo */
+.trending_box > div:first-of-type {
+  margin-left: 0;
+}
+
+.trending_componentes{
+  display: flex;
+  flex-direction: row;
+}
+.trending_list{
+  display: flex;
+  width: 100vh;
+  overflow:hidden;
+}
+.trending{
+  display: flex;
+flex-direction: column;
+}
+
+.description{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+}
+
+.title{
+  font-weight:bolder;
+  font-size: 24px;
+}
+.elements{
+  display: flex;
+  gap: 20px;
+  font-weight:300;
+  font-size: 14px;
+}
+
+.image{
+  -webkit-mask-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  mask-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.image:hover{
+  -webkit-mask-image: none;
+  mask-image: none;
+}
