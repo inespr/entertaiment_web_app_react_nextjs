@@ -1,7 +1,8 @@
-/* Trending.module.css */
+.trending_box_wrapper{
+  position: relative;
+}
 
 .trending_box {
-  display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
@@ -17,32 +18,18 @@
 .trending_box > div {
   scroll-snap-align: start;
   flex-shrink: 0;
-  width: 420px; /* establece un ancho para el contenedor de la imagen */
-  margin-right: 16px; /* añade un margen derecho para separar las imágenes */
+  width: 420px;
+  margin-right: 16px; 
 }
 
-/* Añade un estilo al primer contenedor para asegurarte de que comience desde el borde izquierdo */
 .trending_box > div:first-of-type {
   margin-left: 0;
 }
 
-.trending_componentes{
-  display: flex;
-  flex-direction: row;
-}
-.trending_list{
-  display: flex;
-  width: 100vh;
-  overflow:hidden;
-}
-.trending{
-  display: flex;
-flex-direction: column;
-}
 
 .description{
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   list-style: none;
@@ -62,8 +49,23 @@ flex-direction: column;
 .image{
   -webkit-mask-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   mask-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  height: 100%;
+  border-radius: 5px;
 }
 .image:hover{
   -webkit-mask-image: none;
   mask-image: none;
+}
+
+.bookmark{
+  background-color: var(--button-color);
+  position: absolute;
+  border-radius: 66px;
+  width: 25px;
+  height: 25px;
+  right: 20px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

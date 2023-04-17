@@ -2,25 +2,37 @@ import React from "react";
 import Image from "next/image";
 import { Carousel } from "@mantine/carousel";
 import styles from "./Trending.module.css";
+import { FiChevronLeft } from "react-icons/fi";
+import { rem } from "@mantine/core";
 
 export default function Trending({ trendings }) {
   console.log("trends", trendings);
   return (
     <div>
-      <h1>Trending movies and series for the week</h1>
+      <h1>Trending of the week</h1>
       <Carousel
         withIndicators
         height={200}
         slideSize="100%"
-        slideGap="md"
+        mx="auto"
         loop
+        slideGap="md"
         align="start"
         slidesToScroll={3}
       >
         {trendings.results.map((result) => (
-          <div key={result.id}>
+          <section key={result.id} className={styles.trending_box_wrapper}>
+            
             <Carousel.Slide>
-              <div className={styles.trending_box}>
+            <div className={styles.bookmark}>
+              <Image
+                src="/icons/icon-bookmark-empty.svg"
+                alt="home"
+                width={12}
+                height={12}
+              />
+            </div>
+              <section className={styles.trending_box}>
                 <Image
                   src={`${process.env.NEXT_PUBLIC_TMDB_IMG_BASE_PATH}${result.backdrop_path}`}
                   height={320}
@@ -41,9 +53,9 @@ export default function Trending({ trendings }) {
                     {result.title}
                   </li>
                 </div>
-              </div>
+              </section>
             </Carousel.Slide>
-          </div>
+          </section>
         ))}
       </Carousel>
     </div>
