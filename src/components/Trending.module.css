@@ -1,0 +1,71 @@
+.trending_box_wrapper{
+  position: relative;
+}
+
+.trending_box {
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.trending_box::-webkit-scrollbar {
+  display: none;
+}
+
+.trending_box > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 420px;
+  margin-right: 16px; 
+}
+
+.trending_box > div:first-of-type {
+  margin-left: 0;
+}
+
+
+.description{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+}
+
+.title{
+  font-weight:bolder;
+  font-size: 24px;
+}
+.elements{
+  display: flex;
+  gap: 20px;
+  font-weight:300;
+  font-size: 14px;
+}
+
+.image{
+  -webkit-mask-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  mask-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  height: 100%;
+  border-radius: 5px;
+}
+.image:hover{
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.bookmark{
+  background-color: var(--button-color);
+  position: absolute;
+  border-radius: 66px;
+  width: 25px;
+  height: 25px;
+  right: 20px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

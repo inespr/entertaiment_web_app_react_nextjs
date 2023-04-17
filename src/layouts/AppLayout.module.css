@@ -21,5 +21,6 @@
   align-items: center;
 }
 .container {
-  flex-basis: 100%;
+  width: 100%;
+  padding: inherit;
 }

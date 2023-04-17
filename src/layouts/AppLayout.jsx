@@ -23,20 +23,26 @@ export default function AppLayout({ metaTitle, metaDescription, children }) {
         <meta
           property="og:image"
           content="https://ia.media-imdb.com/images/rock.jpg"
-          />
+        />
+       
       </Head>
       <div className={styles.mainWrapper}>
         <header className={styles.header}>
           <SideBar />
         </header>
         <div className={styles.container}>
-          <main className={styles.main}>
+          <main>
             <SearchBar />
             {children}
           </main>
           <footer className={styles.credits}>
             <p className={styles.text}>Powered by</p>
-            <Image alt="TMDB" src="/icons/apiLogo.svg" width={100} height={10} />
+            <Image
+              alt="TMDB"
+              src="/icons/apiLogo.svg"
+              width={100}
+              height={10}
+            />
           </footer>
         </div>
       </div>
