@@ -1,0 +1,13 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  border: 1px solid #ffff;
+  padding: 40px;
+}
+.form button {
+  color: black;
+}
+.form input {
+  color: black;
+}
