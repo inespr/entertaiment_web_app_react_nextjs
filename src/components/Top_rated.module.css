@@ -34,7 +34,8 @@
 .wrapper_rated_box{
   display: flex;
   flex-wrap:wrap;
-  gap: 35px;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 .image{

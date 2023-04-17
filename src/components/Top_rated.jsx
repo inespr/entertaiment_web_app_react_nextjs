@@ -10,21 +10,19 @@ export default function TopRated({ topmovie, toptv }) {
       <section className={styles.wrapper_rated_box}>
         {topmovie.results.map((result) => (
           <div key={result.id} className={styles.rated_box_wrapper}>
-                  <div className={styles.bookmark}>
-                <Image
-                  src="/icons/icon-bookmark-empty.svg"
-                  alt="home"
-                  width={12}
-                  height={12}
-                 
-                />
-                </div>
+            <div className={styles.bookmark}>
+              <Image
+                src="/icons/icon-bookmark-empty.svg"
+                alt="home"
+                width={12}
+                height={12}
+              />
+            </div>
             <div className={styles.rated_box}>
-      
               <Image
                 src={`${process.env.NEXT_PUBLIC_TMDB_IMG_BASE_PATH}${result.backdrop_path}`}
-                height={120}
-                width={220}
+                height={170}
+                width={270}
                 alt={`Image from ${result.title}`}
                 position={"relative"}
                 className={styles.image}
@@ -70,7 +68,8 @@ export default function TopRated({ topmovie, toptv }) {
                 <span className={styles.elements}>
                   <span className={styles.elements_left}>
                     <span>
-                      {result.first_air_date && result.first_air_date.slice(0, 4)}
+                      {result.first_air_date &&
+                        result.first_air_date.slice(0, 4)}
                     </span>
                     <span>
                       {result.original_language &&
