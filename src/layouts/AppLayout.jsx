@@ -32,7 +32,7 @@ export default function AppLayout({ metaTitle, metaDescription, children }) {
         </header>
         <div className={styles.container}>
           <main>
-            <SearchBar />
+            <SearchBar/>
             {children}
           </main>
           <footer className={styles.credits}>
