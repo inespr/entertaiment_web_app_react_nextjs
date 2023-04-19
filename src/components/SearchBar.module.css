@@ -1,6 +1,6 @@
 .input_search_wrapper{
   background-color: var(--bg-color);
-  color: white;
+  color: var(--primary-color);
   display: flex;
   align-items: center;
   gap: 4px;
@@ -14,7 +14,7 @@
 
 .input_search{
   border: none;
-  color: black;
+  color: var(--primary-color);
   width: 100vh;
   display: flex;
   padding: 8px;
