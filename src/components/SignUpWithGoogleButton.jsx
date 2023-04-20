@@ -2,6 +2,9 @@ import firebase from "firebase/app";
 import { auth } from "/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import styles from './SignUpWithGoogleButton.module.css'
+import Image from "next/image";
+
 
 const provider = new GoogleAuthProvider();
 
@@ -32,8 +35,17 @@ export default function SignUpWithGoogleButton() {
   }
 
   return (
-    <button onClick={signUpWithGoogle} disabled={loading || user}>
-      {loading ? "Loading..." : user ? "Signed In" : "Sign Up with Google"}
-    </button>
+    <div className={styles.gSignInWrapper}>
+      <button onClick={signUpWithGoogle} disabled={loading || user} className={styles.customGPlusSignIn}>
+        <Image
+         src="/icons/icons8-google.svg"
+         alt="movies"
+         width={10}
+         height={10}
+         className={styles.icon}
+        />
+        <span className={styles.buttonText}>{loading ? "Loading..." : user ? "Signed In" : "Sign Up with Google"}</span>
+      </button>
+    </div>
   );
 }
