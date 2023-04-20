@@ -2,8 +2,9 @@ import { useState } from "react";
 import styles from "./SignUp.module.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "/firebase";
-import { SaveUserInfo } from "@/components/SaveUserInfo";
-import { GoogleLogin } from "@react-oauth/google";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import SignUpWithGoogleButton from "./SignUpWithGoogleButton";
+
 
 export function SignUp() {
   const [formState, setFormState] = useState({
@@ -12,7 +13,6 @@ export function SignUp() {
     email: "",
     password: "",
   });
-
   function handleSubmit(event) {
     event.preventDefault();
     createUserWithEmailAndPassword(auth, formState.email, formState.password)
@@ -81,8 +81,10 @@ export function SignUp() {
             required
           />
         </div>
-        <button type="submit">Sign Up</button>
+        <button>Sign Up</button>
       </form>
+      <SignUpWithGoogleButton />
+
     </>
   );
 }
