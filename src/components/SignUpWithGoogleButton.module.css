@@ -1,0 +1,35 @@
+.customGPlusSignIn {
+  display: inline-block;
+  background-color: white;
+  min-width: 190px;
+  border-radius: 5px;
+  border: thin solid #888;
+  box-shadow: 1px 1px 1px grey;
+  white-space: nowrap;
+}
+
+.customGPlusSignIn:hover {
+  cursor: pointer;
+}
+
+.icon {
+  background: url("/identity/sign-in/g-normal.png") transparent 5px 50%
+    no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+.buttonText {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: "Roboto", sans-serif;
+}
