@@ -4,7 +4,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "/firebase";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import SignUpWithGoogleButton from "./SignUpWithGoogleButton";
-
+import Image from "next/image";
 
 export function SignUp() {
   const [formState, setFormState] = useState({
@@ -14,6 +14,14 @@ export function SignUp() {
     password: "",
   });
   function handleSubmit(event) {
+    const password = registerForm["password"].value;
+    const confirmPassword = registerForm["confirm-password"].value;
+
+    if (password !== confirmPassword) {
+      alert('Las contraseñas no coinciden. Por favor, inténtalo de nuevo.');
+      return;
+    }
+
     event.preventDefault();
     createUserWithEmailAndPassword(auth, formState.email, formState.password)
       .then((userCredential) => {
@@ -34,58 +42,76 @@ export function SignUp() {
   };
 
   return (
-    <>
-      {" "}
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formState.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="surname">Surname:</label>
-          <input
-            type="text"
-            id="surname"
-            name="surname"
-            value={formState.surname}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formState.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={formState.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button>Sign Up</button>
-      </form>
-      <SignUpWithGoogleButton />
+    <div className={styles.container}>
+      <div className={styles.signupWrapper}>
+        <Image src="/icons/logo.svg" alt="logo" width={40} height={30} />
+        <div className={styles.sigup}>
+          <h1 className={styles.title}>Sign Up</h1>
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <SignUpWithGoogleButton />
 
-    </>
+            <div>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formState.name}
+                onChange={handleChange}
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                value={formState.surname}
+                onChange={handleChange}
+                placeholder="Surname"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formState.email}
+                onChange={handleChange}
+                placeholder="Email address"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formState.password}
+                onChange={handleChange}
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                value={formState.password}
+                onChange={handleChange}
+                placeholder="Repeat password"
+                required
+              />
+            </div>
+            <button className={styles.buttonApp}>
+              <span className={styles.buttonText}>Create an account</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 }
 
