@@ -1,13 +1,73 @@
 .form {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
-  border: 1px solid #ffff;
-  padding: 40px;
+  gap: 20px;
 }
-.form button {
-  color: black;
+.buttonApp {
+  display: inline-block;
+  background-color: var(--button-color);
+  min-width: 190px;
+  border-radius: 5px;
+  border: thin solid #888;
+  box-shadow: 1px 1px 1px grey;
+  white-space: nowrap;
 }
+
+.buttonText {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-primary-color);
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
 .form input {
-  color: black;
+  width: 100%;
+  color: var(--text-primary-color);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  background-color: var(--bg-navbar-color);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: var(--icon-disable-color);
+  border-width: 1px;
+}
+
+.form input::placeholder{
+  color: var(--icon-disable-color);
+}
+
+.sigup{
+  max-width: 430px;
+  background-color: var(--bg-navbar-color);
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+}
+
+.signupWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title{
+  font-weight: 200;
 }
