@@ -24,7 +24,7 @@ function Home({ trendings, topmovie, toptv, search }) {
   );
 }
 
-export async function getStaticProps() {
+async function getStaticProps() {
   const media_type = "all";
   const time_window = "week";
   const response = await fetch(
