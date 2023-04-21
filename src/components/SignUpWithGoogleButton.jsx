@@ -40,11 +40,11 @@ export default function SignUpWithGoogleButton() {
         <Image
          src="/icons/icons8-google.svg"
          alt="movies"
-         width={10}
-         height={10}
+         width={18}
+         height={18}
          className={styles.icon}
         />
-        <span className={styles.buttonText}>{loading ? "Loading..." : user ? "Signed In" : "Sign Up with Google"}</span>
+        <span className={styles.buttonText}>{loading ? "Loading..." : user ? "Log In with Google".toUpperCase() : "Sign Up with Google".toUpperCase()}</span>
       </button>
     </div>
   );
