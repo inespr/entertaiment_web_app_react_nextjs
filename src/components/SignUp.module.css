@@ -1,25 +1,25 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 .buttonApp {
   display: inline-block;
   background-color: var(--button-color);
-  min-width: 190px;
+  width: -webkit-fill-available;
   border-radius: 5px;
-  border: thin solid #888;
-  box-shadow: 1px 1px 1px grey;
+  border: none;
+  box-shadow: none;
   white-space: nowrap;
+  padding: 10px;
+  gap: 24px;
+  display: flex;
+  justify-content: center;
 }
 
 .buttonText {
   display: inline-block;
   vertical-align: middle;
-  padding-left: 42px;
-  padding-right: 42px;
-  padding-top: 15px;
-  padding-bottom: 15px;
   font-size: 14px;
   font-weight: bold;
   color: var(--text-primary-color);
@@ -46,12 +46,21 @@
   color: var(--icon-disable-color);
 }
 
+.inputWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .sigup{
   max-width: 430px;
   background-color: var(--bg-navbar-color);
   border-radius: 15px;
   padding: 40px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .signupWrapper{
@@ -70,4 +79,26 @@
 
 .title{
   font-weight: 200;
+  font-size: 35px;
+}
+
+.buttonAppSection{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.continuewith{
+ position: absolute;
+ left: 50px;
+ right: 50px;
+ top: -10px;
+ background-color: var(--bg-navbar-color);
+ padding: 0px 2px;
+ color: var(--icon-disable-color);
+ font-size: 14px;
+}
+.continuewithWrapper{
+  border-top: 1px solid var(--icon-disable-color);
+  position: relative;
 }
