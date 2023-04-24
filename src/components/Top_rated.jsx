@@ -8,7 +8,7 @@ export default function TopRated({ topmovie, toptv }) {
     <div className={styles.top_rated}>
       <h1>Top Rated Movie</h1>
       <section className={styles.wrapper_rated_box}>
-        {topmovie.results.map((result) => (
+        {topmovie && topmovie.results && topmovie.results.map((result) => (
           <div key={result.id} className={styles.rated_box_wrapper}>
             <div className={styles.bookmark}>
               <Image
@@ -53,7 +53,7 @@ export default function TopRated({ topmovie, toptv }) {
       </section>
       <h1>Top Rated TV</h1>
       <section className={styles.wrapper_rated_box}>
-        {toptv.results.map((result) => (
+        {toptv && toptv.results && toptv.results.map((result) => (
           <div key={result.id}>
             <div className={styles.rated_box}>
               <Image
