@@ -20,7 +20,7 @@ export default function Trending({ trendings }) {
         align="start"
         slidesToScroll={3}
       >
-        {trendings.results.map((result) => (
+        {trendings && trendings.results && trendings.results.map((result) => (
           <section key={result.id} className={styles.trending_box_wrapper}>
             <Carousel.Slide>
               <div className={styles.bookmark}>
