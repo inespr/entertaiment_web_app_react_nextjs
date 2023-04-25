@@ -2,8 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { Carousel } from "@mantine/carousel";
 import styles from "./Trending.module.css";
-import { FiChevronLeft } from "react-icons/fi";
-import { rem } from "@mantine/core";
 
 export default function Trending({ trendings }) {
   console.log("trends", trendings);
