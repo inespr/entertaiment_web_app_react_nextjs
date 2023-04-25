@@ -12,6 +12,7 @@ export function SignUp() {
     surname: "",
     email: "",
     password: "",
+    confirmPassword: "",
   });
   function handleSubmit(event) {
     const password = registerForm["password"].value;
@@ -100,7 +101,7 @@ export function SignUp() {
                   type="password"
                   id="confirm-password"
                   name="confirm-password"
-                  value={formState.password}
+                  value={formState.confirmpassword}
                   onChange={handleChange}
                   placeholder="Repeat password"
                   required
