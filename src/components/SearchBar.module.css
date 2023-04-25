@@ -1,0 +1,23 @@
+.input_search_wrapper{
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+ 
+}
+
+.svg{
+  position: relative;
+  right: -30px;
+}
+
+.input_search{
+  border: none;
+  color: var(--primary-color);
+  width: 100vh;
+  display: flex;
+  padding: 8px;
+  background-color: var(--bg-color);
+  text-indent: 30px;
+}

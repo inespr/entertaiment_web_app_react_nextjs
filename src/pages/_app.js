@@ -1,9 +1,12 @@
-import Layout from "../layouts/AppLayout";
+import 'normalize.css';
+import "../styles/globals.css";
+import { Outfit } from "next/font/google";
+const outfit = Outfit({ subsets: ["latin"] });
 
-export default function App({ Component, pageProps }) {
+export default function EntertainmentApp({ Component, pageProps }) {
   return (
-    <Layout>
+    <div className={outfit.className}>
       <Component {...pageProps} />
-    </Layout>
+    </div>
   );
 }
