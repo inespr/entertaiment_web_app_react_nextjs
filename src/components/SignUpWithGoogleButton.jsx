@@ -2,9 +2,8 @@ import firebase from "firebase/app";
 import { auth } from "/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import styles from './SignUpWithGoogleButton.module.css'
+import styles from "./SignUpWithGoogleButton.module.css";
 import Image from "next/image";
-
 
 const provider = new GoogleAuthProvider();
 
@@ -36,15 +35,25 @@ export default function SignUpWithGoogleButton() {
 
   return (
     <div className={styles.gSignInWrapper}>
-      <button onClick={signUpWithGoogle} disabled={loading || user} className={styles.customGPlusSignIn}>
+      <button
+        onClick={signUpWithGoogle}
+        disabled={loading || user}
+        className={styles.customGPlusSignIn}
+      >
         <Image
-         src="/icons/icons8-google.svg"
-         alt="movies"
-         width={18}
-         height={18}
-         className={styles.icon}
+          src="/icons/icons8-google.svg"
+          alt="movies"
+          width={18}
+          height={18}
+          className={styles.icon}
         />
-        <span className={styles.buttonText}>{loading ? "Loading..." : user ? "Log In with Google".toUpperCase() : "Sign Up with Google".toUpperCase()}</span>
+        <span className={styles.buttonText}>
+          {loading
+            ? "Loading..."
+            : user
+            ? "Log In with Google".toUpperCase()
+            : "Sign Up with Google".toUpperCase()}
+        </span>
       </button>
     </div>
   );
