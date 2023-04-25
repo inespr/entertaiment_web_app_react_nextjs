@@ -1,30 +1,24 @@
+import { SearchDataContext } from "@/components/DataContext";
 import { SearchResults } from "@/components/SearchResults";
 import TopRated from "@/components/Top_rated";
 import Trending from "@/components/Trending";
-import { DataContextProvider, useDataContext } from "@/contexts/dataContext";
 import AppLayout from "@/layouts/AppLayout";
+import { useContext } from "react";
 
-function Home({ trendings, topmovie, toptv, search }) {
-  //const {contextData} = useDataContext();
-
+function Home({ trendings, topmovie, toptv }) {
   return (
-    //<DataContextProvider>
-      <AppLayout
-        metaTitle="Entertainment Web App | Home"
-        metaDescription="Frontenmentor project realised by...."
-      >
-        <SearchResults></SearchResults>
-        <Trending trendings={trendings} />
-        <TopRated topmovie={topmovie} toptv={toptv} />
-
-        {/*contextData ? <SearchResults></SearchResults> : <><Trending trendings={trendings} /><TopRated topmovie={topmovie} toptv={toptv} /></>*/}
-      </AppLayout>
-
-    //</DataContextProvider>
+    <AppLayout
+      metaTitle="Entertainment Web App | Home"
+      metaDescription="Frontenmentor project realised by...."
+    >
+      <SearchResults />
+      <Trending trendings={trendings} />
+      <TopRated topmovie={topmovie} toptv={toptv} />
+    </AppLayout>
   );
 }
 
-async function getStaticProps() {
+export async function getStaticProps() {
   const media_type = "all";
   const time_window = "week";
   const response = await fetch(
