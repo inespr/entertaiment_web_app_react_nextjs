@@ -20,28 +20,21 @@
   opacity: 0.5;
 }
 
-.filled {
-  color: red;
-}
-
 .full {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   overflow: hidden;
+  z-index: 1;
+  background-color: yellow;
 }
 
 .rating {
   margin-left: 10px;
   font-size: 16px;
   font-weight: bold;
-  color: #555;
 }
-
-.outOfTen {
-  font-size: 12px;
-  font-weight: normal;
-  color: #999;
-  margin-left: 2px;
+.filled{
+  color: yellow;
 }

@@ -18,7 +18,6 @@ function Home({ trendings, topmovie, toptv }) {
   );
 }
 
-
 export async function getStaticProps() {
   const media_type = "all";
   const time_window = "week";
