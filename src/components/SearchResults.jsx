@@ -24,11 +24,13 @@ export function SearchResults() {
             </div>
             <div className={styles.rated_box}>
               <Image
-                src={`${process.env.NEXT_PUBLIC_TMDB_IMG_BASE_PATH}${
+                src={result.backdrop_path || result.poster_path ? `${process.env.NEXT_PUBLIC_TMDB_IMG_BASE_PATH}${
                   result.backdrop_path
                     ? result.backdrop_path
                     : result.poster_path
-                }`}
+                    ? result.poster_path
+                    : '/notfound'
+                }`: '/icons/image-not-found.webp'}
                 height={170}
                 width={270}
                 alt={`Image from ${result.title}`}
@@ -44,6 +46,9 @@ export function SearchResults() {
                     <span>
                       {result.original_language &&
                         result.original_language.toUpperCase()}
+                    </span>
+                    <span>
+                      {result.adult === false ? '' : '+18asd'}
                     </span>
                   </span>
 
