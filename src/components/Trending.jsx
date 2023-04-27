@@ -18,44 +18,56 @@ export default function Trending({ trendings }) {
         align="start"
         slidesToScroll={3}
       >
-        {trendings && trendings.results && trendings.results.map((result) => (
-          <section key={result.id} className={styles.trending_box_wrapper}>
-            <Carousel.Slide>
-              <div className={styles.bookmark}>
-                <Image
-                  src="/icons/icon-bookmark-empty.svg"
-                  alt="home"
-                  width={12}
-                  height={12}
-                />
-              </div>
-              <section className={styles.trending_box}>
-                <Image
-                  src={`${process.env.NEXT_PUBLIC_TMDB_IMG_BASE_PATH}${result.backdrop_path}`}
-                  height={300}
-                  width={385}
-                  alt={`Image from ${result.title}`}
-                  position={"relative"}
-                  className={styles.image}
-                />
-                <div className={styles.description}>
-                  <span className={styles.elements}>
-                    <span>{result.media_type.toUpperCase()}</span>
-                    <span>
-                      {result.release_date
-                        ? result.release_date.slice(0, 4)
-                        : result.first_air_date.slice(0, 4)}
-                    </span>
-                    <span>{result.original_language.toUpperCase()}</span>
-                  </span>
-                  <li key={result.id} className={styles.title}>
-                    {result.title ? result.title : result.name}
-                  </li>
+        {trendings &&
+          trendings.results &&
+          trendings.results.map((result) => (
+            <section key={result.id} className={styles.trending_box_wrapper}>
+              <Carousel.Slide>
+                <div className={styles.bookmark}>
+                  <Image
+                    src="/icons/icon-bookmark-empty.svg"
+                    alt="home"
+                    width={12}
+                    height={12}
+                  />
                 </div>
-              </section>
-            </Carousel.Slide>
-          </section>
-        ))}
+                <section className={styles.trending_box}>
+                  <Image
+                    src={
+                      result.backdrop_path || result.poster_path
+                        ? `${process.env.NEXT_PUBLIC_TMDB_IMG_BASE_PATH}${
+                            result.backdrop_path
+                              ? result.backdrop_path
+                              : result.poster_path
+                              ? result.poster_path
+                              : "/notfound"
+                          }`
+                        : "/icons/image-not-found.webp"
+                    }
+                    height={300}
+                    width={385}
+                    alt={`Image from ${result.title}`}
+                    position={"relative"}
+                    className={styles.image}
+                  />
+                  <div className={styles.description}>
+                    <span className={styles.elements}>
+                      <span>{result.media_type.toUpperCase()}</span>
+                      <span>
+                        {result.release_date
+                          ? result.release_date.slice(0, 4)
+                          : result.first_air_date.slice(0, 4)}
+                      </span>
+                      <span>{result.original_language.toUpperCase()}</span>
+                    </span>
+                    <li key={result.id} className={styles.title}>
+                      {result.title ? result.title : result.name}
+                    </li>
+                  </div>
+                </section>
+              </Carousel.Slide>
+            </section>
+          ))}
       </Carousel>
     </div>
   );
