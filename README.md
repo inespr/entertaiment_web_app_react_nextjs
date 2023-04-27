@@ -21,4 +21,9 @@ npm run dev
 ```
 #### Proyect from: [URL shortening API landing page](https://www.frontendmentor.io/challenges/entertainment-web-app-J-UhgAW1X)
 
-
+### ENVIRONMENT VARIABLES
+```shell
+* NEXT_PUBLIC_TMDB_API_KEY=7496a040aa70953998be286c60d64791
+* NEXT_PUBLIC_TMDB_API_BASE_PATH=https://api.themoviedb.org/3
+* NEXT_PUBLIC_TMDB_IMG_BASE_PATH=https://image.tmdb.org/t/p/w500
+```
