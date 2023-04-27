@@ -22,6 +22,8 @@ export default function SearchBar() {
     };
     if (query.length >= 3) {
       fetchData();
+    } else {
+      setData({});
     }
   }, [query]);
 
@@ -43,9 +45,17 @@ export default function SearchBar() {
           onChange={(event) => setQuery(event.target.value)}
         />
       </div>
-      <SearchDataContext.Provider value={data}>
-        <SearchResults />
-      </SearchDataContext.Provider>
+      {query.length >= 3 && data.results && data.results.length > 0 ? (
+        <>
+        <span>Found {data.results.length} results for &apos;{query}&apos;</span>
+        <SearchDataContext.Provider value={data}>
+          <SearchResults />
+        </SearchDataContext.Provider>
+        </>
+      ) : null}
+      {query.length >= 3 && (!data.results || data.results.length === 0) ? (
+        <span>Found 0 results </span>
+      ) : null}
     </>
   );
 }
