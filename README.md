@@ -23,7 +23,7 @@ npm run dev
 
 ### ENVIRONMENT VARIABLES
 ```shell
-* NEXT_PUBLIC_TMDB_API_KEY=7496a040aa70953998be286c60d64791
-* NEXT_PUBLIC_TMDB_API_BASE_PATH=https://api.themoviedb.org/3
-* NEXT_PUBLIC_TMDB_IMG_BASE_PATH=https://image.tmdb.org/t/p/w500
+NEXT_PUBLIC_TMDB_API_KEY=7496a040aa70953998be286c60d64791
+NEXT_PUBLIC_TMDB_API_BASE_PATH=https://api.themoviedb.org/3
+NEXT_PUBLIC_TMDB_IMG_BASE_PATH=https://image.tmdb.org/t/p/w500
 ```
